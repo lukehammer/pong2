@@ -23,3 +23,12 @@ p {
     color: red;
 
 }
+
+#player_score, #ai_score{
+            height: 2000px;
+            width: 49%;
+            display: inline-block;
+            text-align: center;
+            vertical-align: top;
+            font-size: 33em;
+        }
