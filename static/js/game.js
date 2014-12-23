@@ -47,6 +47,17 @@ ball = {
     side: 20,
     speed: 9,
 
+    score: function (pdle) {
+      pdle.score++;
+        if(pdle===ai){
+            document.getElementById("player score").innerHTML=player.score;
+        }
+
+        if(pdle===player){
+            document.getElementById("ai score").innerHTML=ai.score;
+        }
+    },
+
     serve: function(side) {
         var r = Math.random();
         this.x = this.side===1 ? player.x : ai.x - this.side;
@@ -87,8 +98,9 @@ ball = {
         }
         //this is if out of bounds//
         if (0 > this.x+this.side || this.x > WIDTH) {
-            pdle.score++;
-            console.log(pdle.score);
+            this.score(pdle)
+
+
             this.serve(pdle === player ? 1 : -1);
         }
 
