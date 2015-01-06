@@ -7,8 +7,8 @@
 <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}" />
 </head>
 <body>
-<div id="player score"></div>
-<div id="ai score"></div>
+<div id="player score" name="ps"></div>
+<div id="ai score" name="ais"></div>
     <h1>Welcome to my version of Pong!!</h1>
     <p>This is the first game I wrote. I hope you like it.</p>
     
@@ -30,7 +30,9 @@
     <input name="password" placeholder="password" type="password">
     <input type="submit" value="Register">
 
+</form>
 <script src="{% static "js/game.js" %}"></script>
+
 
 
 </body>
