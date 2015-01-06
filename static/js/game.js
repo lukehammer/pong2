@@ -60,7 +60,8 @@ ball = {
 
     serve: function(side) {
         var r = Math.random();
-        this.x = this.side===1 ? player.x : ai.x - this.side;
+        this.x = 300
+        //this.x = this.side===1 ? player.x : ai.x - this.side;
         this.y = (HEIGHT - this.side)*r;
 
         var phi = 0.1*pi*(1 - 2*r);
